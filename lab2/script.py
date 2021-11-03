@@ -40,8 +40,8 @@ def compute_y_fit(x, y, index):
 fig, axs = plt.subplots(nrows=4, figsize=(12, 16))
 
 
-def plot(x, y, index):
-    axs[index].set_title(f'Series: {index + 1}')
+def plot(x, y, index, name):
+    axs[index].set_title(f'Series: {name}')
     axs[index].plot(x, y, 'o', label='$x_1')
     axs[index].plot(x_line, compute_y_fit(x, y, index + 1), 'k--')
 
@@ -51,10 +51,10 @@ print_values(x2, y2, 2)
 print_values(x3, y3, 3)
 print_values(x4, y4, 4)
 
-plot(x1, y1, 0)
-plot(x2, y2, 1)
-plot(x3, y3, 2)
-plot(x4, y4, 3)
+plot(x1, y1, 0, "I")
+plot(x2, y2, 1, "II")
+plot(x3, y3, 2, "III")
+plot(x4, y4, 3, "IV")
 
 fig.tight_layout(pad=3.0)
 fig.savefig('plots.png')
