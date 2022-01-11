@@ -1,0 +1,2 @@
+momenty centralne:
+=SUM(POWER(C$11-C$3:C$9, $B13)*$B$3:$B$9)/SUM($B$3:$B$9)
